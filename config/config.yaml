@@ -1,0 +1,21 @@
+project:
+  timezone: UTC
+
+universe:
+  symbols: ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "JPM", "XOM", "JNJ"]
+
+sources:
+  prices:
+    name: stooq
+    granularity: 1d
+    start_date: "2018-01-01"
+
+storage:
+  base_dir: data
+  bronze_dir: bronze
+  silver_dir: silver
+  duckdb_path: duckdb/market.duckdb
+
+silver_tables:
+  dim_assets_path: silver/dim_assets.parquet
+  ohlcv_daily_path: silver/ohlcv_daily.parquet

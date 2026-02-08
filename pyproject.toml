@@ -1,0 +1,26 @@
+[project]
+name = "market-data-lake"
+version = "0.1.0"
+requires-python = ">=3.8"
+dependencies = [
+    "pandas",
+    "pyarrow",
+    "duckdb",
+    "financedatabase",
+    "requests",
+    "pyyaml",
+    "tenacity",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "jupyter",
+    "ipykernel",
+    "ta",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
